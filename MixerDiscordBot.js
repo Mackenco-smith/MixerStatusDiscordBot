@@ -39,7 +39,7 @@ class MixerDiscordBot{
     }
 
     loadInfo(){
-        const infourl = `https://mixer.com/api/v1/channels/${this.config.channelId}`;
+        const infourl = `https://mixer.com/api/v1/channels/${this.config.38163636}`;
         return fetch(infourl).then((data) => {
             return data.json()
         }).then((data) => {
@@ -48,7 +48,7 @@ class MixerDiscordBot{
         });
     }
     subscribe() {
-        this.ca.subscribe(`channel:${this.config.channelId}:update`, data => {
+        this.ca.subscribe(`channel:${this.config.38163636}:update`, data => {
             if(data.online){
                 this.notifyOnStart();
             } else {
